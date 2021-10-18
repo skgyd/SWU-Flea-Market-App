@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cho1.guru2_final_project_1cho">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 권한 선언 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- GPS, 현재 위치 찾기 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.FreeModifyActivity"/>
+        <activity android:name=".activity.FreeWriteActivity" />
+        <activity android:name=".activity.FreeDetailActivity" />
+        <activity android:name=".activity.MyBoardActivity" />
+        <activity android:name=".activity.MyScrapActivity"/>
+        <!-- 카메라 사용을 위한 Provider 선언 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.cho1.guru2_final_project_1cho"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyC9C4eo9Rme8J4CYaytn-Y7ZGe7kbPAO_0" /> <!-- 구글 지도 사용을 위한 키 등록 -->
+        </provider>
+
+        <activity android:name=".activity.ExModifyActivity" />
+        <activity android:name=".activity.ExWriteActivity" />
+        <activity android:name=".activity.SellDetailActivity" />
+        <activity android:name=".activity.BuyDetailActivity" />
+        <activity android:name=".activity.ExDetailActivity" />
+        <activity android:name=".activity.FleaActivity" />
+        <activity android:name=".activity.JoinActivity" />
+        <activity android:name=".activity.CameraCaptureActivity" />
+        <activity android:name=".activity.ModifyMemberActivity" />
+        <activity android:name=".activity.BuyModifyActivity" />
+        <activity android:name=".activity.BuyWriteActivity" />
+        <activity android:name=".activity.SellWriteActivity" />
+        <activity android:name=".activity.SellModifyActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.UserBoardActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

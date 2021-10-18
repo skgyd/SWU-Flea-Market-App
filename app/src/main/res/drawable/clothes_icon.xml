@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <item
+        android:drawable="@drawable/clothes"
+        android:width="25dp"
+        android:height="25dp"
+        android:left="10dp"
+        android:right="10dp"></item>
+
+</layer-list>
+
+

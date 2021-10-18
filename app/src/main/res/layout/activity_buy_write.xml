@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BuyWriteActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleBuyWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="글 작성"
+        android:textStyle="bold"
+        android:textColor="#ff4848"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--이미지뷰, 사진등록 버튼, 드롭다운 스피너, 제목-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBuyWrite"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/photo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBuyWriteImgReg"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="사진 찍기"
+                    android:textStyle="bold"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/border_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_marginBottom="10dp"/>
+                <Button
+                    android:id="@+id/btnBuyWriteGalleryReg"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="갤러리"
+                    android:textStyle="bold"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/border_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinBuyWriteCategory"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dropdown"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/edtBuyWriteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:hint="제목" />
+
+            <!--정가, 판매가-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtBuyWritePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="정가"/>
+
+                <EditText
+                    android:id="@+id/edtBuyWriteSalePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="판매가"/>
+
+            </LinearLayout>
+
+            <!--제품상태, 드롭다운 스피너-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:text="제품 상태"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/spinBuyWriteState"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="40dp"
+                    android:spinnerMode="dropdown"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtBuyWriteDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="구매일" />
+
+            <EditText
+                android:id="@+id/edtBuyWriteExprieDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="유통 기한" />
+
+            <EditText
+                android:id="@+id/edtBuyWriteDefect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="하자 유무" />
+
+            <EditText
+                android:id="@+id/edtBuyWriteSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="실제 측정 사이즈" />
+
+            <EditText
+                android:id="@+id/edtBuyWriteExplain"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="50dp"
+                android:singleLine="false"
+                android:hint="설명" />
+
+            <Button
+                android:id="@+id/btnBuyWriteOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="작성 완료"
+                android:textStyle="bold"
+                android:textColor="#5b5b5b"
+                android:background="@drawable/border_button"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

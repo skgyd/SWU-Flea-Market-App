@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".fragment.FragmentBuy">
+
+    <ListView
+        android:id="@+id/lstMyBuy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:dividerHeight="0px"
+        android:divider="#ffffff">
+    </ListView>
+
+    <Button
+        android:id="@+id/btnDelMyBuy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="전체 삭제"
+        android:textStyle="bold"
+        android:textColor="#5b5b5b"
+        android:background="@drawable/border_button"/>
+
+</LinearLayout>

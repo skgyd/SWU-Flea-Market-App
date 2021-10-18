@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.FreeModifyActivity">
+
+    <TextView
+        android:id="@+id/titleFreeModify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="글 수정"
+        android:textStyle="bold"
+        android:textColor="#ff4848"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/freeWriteImgView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/photo"
+                android:layout_marginTop="50dp"
+                android:layout_marginHorizontal="30dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFreeModifyImgReg"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="사진 찍기"
+                    android:textStyle="bold"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/border_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_marginBottom="10dp"/>
+                <Button
+                    android:id="@+id/btnFreeModifyGalleryReg"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="갤러리"
+                    android:textStyle="bold"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/border_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+           <!-- <Spinner
+                android:id="@+id/spinFreeModifyCategory"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginVertical="10dp"
+                android:spinnerMode="dropdown"
+                />-->
+
+            <EditText
+                android:id="@+id/edtFreeModifyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="제목"/>
+
+            <EditText
+                android:id="@+id/edtFreeModifyPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="장소"
+                android:singleLine="false"/>
+
+            <EditText
+                android:id="@+id/edtFreeModifyExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:hint="설명"
+                android:singleLine="false"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom">
+
+                <Button
+                    android:id="@+id/btnFreeModifyReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/border_button"
+                    android:text="수정 완료" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
